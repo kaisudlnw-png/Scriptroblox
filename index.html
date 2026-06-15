@@ -1,71 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roblox Script Hub Game</title>
 
 <style>
 body{
-background:linear-gradient(#2b0066,#4b00a8);
-font-family:monospace;
-color:white;
-padding:20px;
+    margin:0;
+    padding:20px;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(180deg,#2b0066,#4b00a8);
+    color:white;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
 }
 
 .card{
-background:#14002e;
-padding:20px;
-border-radius:15px;
-margin-bottom:20px;
+    background:#160032;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 0 15px rgba(0,0,0,.4);
 }
 
 .code{
-background:black;
-padding:10px;
-border-radius:10px;
-margin:10px 0;
-word-break:break-all;
+    background:#000;
+    padding:12px;
+    border-radius:8px;
+    margin:15px 0;
+    word-break:break-word;
 }
 
 button{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-color:white;
-font-weight:bold;
-background:linear-gradient(90deg,#a000ff,#4ea1ff);
-cursor:pointer;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(90deg,#9b00ff,#4aa3ff);
 }
 </style>
+
 </head>
 
 <body>
+
+<div class="container">
 
 <h1>🎮 Roblox Script Hub Game</h1>
 
 <div class="card">
 <h2>🐶 Adopt Me</h2>
+
 <div class="code" id="adopt">
-loadstring(game:HttpGet("https://pastebin.com/raw/peLgDaVC"))()
+Coming Soon
 </div>
-<button onclick="copy('adopt')">Copy Adopt Me Script</button>
+
+<button onclick="copyText('adopt')">
+Copy
+</button>
+
 </div>
 
 <div class="card">
+
 <h2>🧠 Steal A Brainrot</h2>
+
 <div class="code" id="brain">
-loadstring(game:HttpGet("https://pastebin.com/raw/peLgDaVC"))()
+Coming Soon
 </div>
-<button onclick="copy('brain')">Copy Brainrot Script</button>
+
+<button onclick="copyText('brain')">
+Copy
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🌱 Grow a Garden 2</h2>
+
+<div class="code" id="garden">
+Coming Soon
+</div>
+
+<button onclick="copyText('garden')">
+Copy
+</button>
+
+</div>
+
 </div>
 
 <script>
-function copy(id){
-navigator.clipboard.writeText(
-document.getElementById(id).innerText
-);
+
+function copyText(id){
+
+let text=document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("Copied!");
+
 }
+
 </script>
 
 </body>
