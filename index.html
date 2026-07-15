@@ -37,6 +37,7 @@ h1{
     border-radius:8px;
     margin:15px 0;
     word-break:break-word;
+    user-select:all;
 }
 
 button{
@@ -48,6 +49,11 @@ button{
     cursor:pointer;
     color:white;
     background:linear-gradient(90deg,#9b00ff,#4aa3ff);
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.02);
 }
 </style>
 
@@ -59,19 +65,20 @@ button{
 
 <h1>🎮 Roblox Script Hub Game</h1>
 
+<!-- Adopt Me -->
 <div class="card">
-<h2>🐶 Adopt Me</h2>
+    <h2>🐶 Adopt Me</h2>
 
-<div class="code" id="adopt">
+    <div class="code" id="adopt">
 Coming Soon
+    </div>
+
+    <button onclick="copyText('adopt')">
+        Copy
+    </button>
 </div>
 
-<button onclick="copyText('adopt')">
-Copy
-</button>
-
-</div>
-
+<!-- Steal A Brainrot -->
 <div class="card">
 
 <h2>🧠 Steal A Brainrot</h2>
@@ -86,6 +93,7 @@ Copy
 
 </div>
 
+<!-- Grow a Garden 2 -->
 <div class="card">
 
 <h2>🌱 Grow a Garden 2</h2>
@@ -105,13 +113,13 @@ Copy
 <script>
 
 function copyText(id){
+    let text = document.getElementById(id).innerText;
 
-let text=document.getElementById(id).innerText;
-
-navigator.clipboard.writeText(text);
-
-alert("Copied!");
-
+    navigator.clipboard.writeText(text).then(()=>{
+        alert("Copied!");
+    }).catch(()=>{
+        alert("Copy failed.");
+    });
 }
 
 </script>
